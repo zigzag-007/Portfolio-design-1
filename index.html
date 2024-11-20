@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creatify - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Creatify</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-item">Home</a></li>
+                    <li><a href="#about" class="nav-item">About</a></li>
+                    <li><a href="My_Favorite_Things.html">My Favorite Things</a></li>
+                    <li><a href="My_Favorite_Place.html">My Favorite Place</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section aka Intro section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-right" data-aos="fade-left">
+                    <h2>Hello, It's Me <span class="highlight">Thalal Rafi</span></h2>
+                    <h3>And I'm an Enthusiast</h3>
+                    <p>I'm an individual with a passion for creativity and technology, <br> blending both to create meaningful experiences <br> that inspire and engage others.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                        <a href="#"><i class='bx bxl-instagram'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                    </div>
+                    <a href="#about" class="btn">More About Me</a>
+                </div>
+                <div class="hero-left" data-aos="fade-right">
+                    <div class="profile-pic">
+                        <img src="img/thalal.jpg" alt="Profile Picture">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-left" data-aos="fade-right">
+                    <div class="about-pic">
+                        <img src="img/thalal.jpg" alt="About Image">
+                    </div>
+                </div>
+                <div class="about-right" data-aos="fade-left">
+                    <h2>About <span class="highlight">Me</span></h2>
+                    <p>My name is Thalal Rafi, and I'm an enthusiastic individual with a passion for creativity and technology. I attended Wycherley International School, where I developed a strong foundation in both academics and personal interests. Growing up, the immersive world of video games always captivated me, not just as a player but also as someone fascinated by the storytelling, strategy, and creativity involved in game design. This curiosity has driven me to explore the intersections of gaming and technology, inspiring me to dabble in coding and digital art in my spare time. When I'm not gaming, I enjoy brainstorming innovative ideas for projects, from designing unique game concepts to exploring the latest trends in technology. My journey is one of continuous learning and creativity, always aiming to blend my passions into something meaningful.</p>
+                    <a href="#" class="btn">More About Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>Copyright © 2024 Creatify | ❤️Designed by Zig Zag
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+        });
+
+        // Navbar highlight on scroll
+        const sections = document.querySelectorAll("section");
+        const navItems = document.querySelectorAll(".nav-item");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 60) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navItems.forEach(li => {
+                li.classList.remove("active");
+                if (li.getAttribute("href").includes(current)) {
+                    li.classList.add("active");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

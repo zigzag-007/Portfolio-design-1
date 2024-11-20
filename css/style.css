@@ -1,0 +1,433 @@
+/**
+ * ------------------------------------------------------------------------
+ * Stylesheet for Creatify, Home Page, About, Header & Footer
+ * ------------------------------------------------------------------------
+ * Author: Zig Zag
+ * Date: 2024
+ * Description: Custom CSS for Index.html (Home Page).
+ * Brought to you by Dark Net Studio Laboratories.
+ * ------------------------------------------------------------------------
+ */
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #0f2027;
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+    color: #fff;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+header .logo h1 {
+    float: left;
+    margin: 2px;
+    padding-left: 20px;
+    font-weight: 600;
+    font-size: 35px;
+    color: #ff006e;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 10;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    transition: all 0.3s ease; /* Combined transition for smooth effect */
+    position: relative;
+}
+
+header nav ul li a.active {
+    color: #ff006e; /* Highlight the active link */
+}
+
+header nav ul li a:hover {
+    color: #ff006e;
+    background: rgba(255, 255, 255, 0.1); /* Subtle background color change */
+    padding: 5px 10px;
+    border-radius: 5px; /* Rounded background on hover */
+}
+
+header nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #ff006e;
+    transition: width 0.4s ease;
+}
+
+header nav ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    background: #ff006e;
+}
+
+/* Hero Section aka Intro section */
+.hero-section {
+    padding: 90px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hero-right {
+    flex: 2;
+    padding-left: 50px;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.hero-left .profile-pic {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #ff006e;
+    box-shadow: 0 0 20px #ff006e;
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hero-left .profile-pic:hover {
+    border-color: #00f7ff;
+    box-shadow: 0 0 40px #00f7ff;
+}
+
+.hero-left img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+/* Headings */
+h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: #fff;
+}
+
+h2 .highlight {
+    color: #ff006e;
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #ccc;
+}
+
+/* Additional Styling for Hero Section */
+.hero-right p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.social-icons a {
+    font-size: 24px;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    border: none;
+}
+
+.social-icons a:hover {
+    color: #ff006e;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.hero-right .btn {
+    background: #00f7ff;
+    color: #0f2027;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 0 10px #00f7ff;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-start;
+}
+
+.hero-right .btn:hover {
+    background: #ff006e;
+    color: #fff;
+    transform: scale(1.1); /* Slight increase in size on hover */
+    box-shadow: 0 0 20px #ff006e;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 0;
+    background: #111;
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.about-left .about-pic {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid #ff006e;
+    box-shadow: 0 0 20px #ff006e;
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.about-left .about-pic:hover {
+    border-color: #00f7ff;
+    box-shadow: 0 0 40px #00f7ff;
+}
+
+.about-left img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.about-right {
+    flex: 2;
+    padding-left: 50px;
+}
+
+.about-right p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.about-right .btn {
+    background: #00f7ff;
+    color: #0f2027;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: 0 0 10px #00f7ff;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-right .btn:hover {
+    background: #ff006e;
+    color: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff006e;
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #ff006e;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #8338ec;
+}
+
+/* AOS Animations */
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 0.6s;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(20px);
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/**
+ * ------------------------------------------------------------------------
+ * Stylesheet for Creatify, My Favourite Things Page
+ * ------------------------------------------------------------------------
+ * Author: Zig Zag
+ * Date: 2024
+ * Description: Custom CSS for Favourite Things
+ * Brought to you by Dark Net Studio Laboratories.
+ * ------------------------------------------------------------------------
+ */
+
+/* Additional styles for My Favorite Things page */
+.favorite-things-section {
+    padding: 120px 0 60px;
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+
+.favorite-things-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.favorite-things-intro h2 {
+    font-size: 48px;
+    color: #ff006e;
+    margin-bottom: 20px;
+}
+
+.favorite-things-intro p {
+    font-size: 18px;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.favorite-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.favorite-content {
+    flex: 1;
+    padding: 0 30px;
+}
+
+.favorite-image {
+    flex: 1;
+    text-align: center;
+}
+
+/* Ensure that the styling matches the profile picture in index.html */
+.favorite-image img {
+    border-radius: 50%; /* Make the images circular */
+    overflow: hidden;
+    border: 10px solid #ff006e;
+    box-shadow: 0 0 20px #ff006e;
+    transition: border-color 0.5s ease, box-shadow 0.5s ease;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.favorite-image img:hover {
+    border-color: #00f7ff;
+    box-shadow: 0 0 40px #00f7ff;
+    transform: scale(1.05) rotate(2deg);
+}
+
+/* Video container styling */
+.video-container {
+    margin: 40px auto;
+    max-width: 800px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: none; /* Remove any box shadow to avoid unintended effects */
+}
+
+.video-container iframe {
+    width: 80%;
+    height: 350px; /* Set a fixed height or adjust as necessary */
+    border: none;
+    border-radius: 15px; /* Apply border-radius directly to the iframe */
+}
+
+.video-container:hover {
+    transform: none; /* Remove scale on hover to keep it simple */
+    box-shadow: none; /* Remove hover box-shadow */
+}
